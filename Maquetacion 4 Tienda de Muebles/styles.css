@@ -1,0 +1,397 @@
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1 rem va a ser igual a 10px */
+}
+*, *::before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+/*Globales*/
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor{
+    border-top: 1px solid #e1e1e1;
+    max-width: 120rem;
+    margin: 0 auto;
+    /*Version resumida es margin:0 auto; tambien se puede usar margin in line*/
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+/*Utilidades*/
+
+.text-center{
+    text-align: center;
+}
+
+.btn{
+    background-color: #8cbc00;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+    text-align: center;
+    border: none;
+}
+
+.btn:hover{
+    background-color: #769c02;
+    cursor: pointer;
+}
+
+.max-width30{
+    max-width: 30rem;
+}
+
+/*Header y Navegacion*/
+.nombre-sitio{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.nombre-sitio span{
+    color: #037bc0;
+}
+
+.nav-principal{
+    border-top: 0.1rem solid #e1e1e1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero img{
+    height: 55rem;
+    width: 100%;
+    background-position: center center;
+}
+
+.categorias{
+    padding-top: 5rem;
+}
+
+
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover{
+    background-color: #037bc0;
+    color: white;
+    border-bottom-right-radius: 1rem;
+}
+
+.categorias h2{
+    text-align: center;
+}
+
+
+.listado-categorias{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.categoria img{
+    size: 25rem;
+    display: block;
+}
+
+/*Bloque Nosotros*/
+
+.sobre-nosotros{
+    background-image: linear-gradient( to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(img/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+    margin-top: 3rem;
+}
+
+.sobre-nosotros-grid{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.texto-nosotros{
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: white;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*Listado de Productos*/
+.contenido-principal {
+    padding-top: 5rem;
+}
+
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.producto {
+    background-color: #037bc0;
+}
+
+
+.texto-producto{
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.texto-producto h3{
+    margin: 0;
+}
+
+.texto-producto p{
+    margin: 0 0;
+}
+
+.texto-producto .precio{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+.texto-producto a{
+    background-color: #8cbc00;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out;
+}
+
+.texto-producto a:hover{
+    background-color: #769c02;
+}
+
+.producto:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.producto:nth-child(1) img{
+    height: 43rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2) img, .producto:nth-child(3) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.producto:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.producto:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+/*Footer*/
+.site-footer{
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+
+.site-footer h3{
+    margin-bottom: .5rem;
+}
+.grid-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-menu a{
+    display: block;
+}
+
+.copywrite {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+/*Nosotros*/
+
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4rem;
+   text-align: justify;
+}
+
+/*Blog*/
+.contenedor-blog{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada{
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+}
+
+.entrada-meta{
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p{
+    font-weight: 700;
+}
+
+.entrada-meta span{
+    justify-content: flex-end;
+    color: #037bc0;
+}
+
+.contenido-entrada-blog{
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.contenido-entrada-blog, .contenido-entrada-blog p {
+    width: 65rem;
+    margin: 0 auto;
+    display: block;
+    text-justify: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.entrada-meta p:last-child {
+    margin-left: 18rem;
+}
+
+/*Galería*/
+
+.galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img{
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+/*Formulario*/
+
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select{
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
